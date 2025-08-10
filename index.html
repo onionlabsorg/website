@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Onion Labs — We build the ONION® thinking tools</title>
+  <meta name="description" content="Onion Labs: the tech behind Digital ONION®.">
+  <link rel="canonical" href="https://onionlabs.org/" />
+  <meta name="theme-color" content="#7b55b3" />
+  <link rel="icon" type="image/png" href="./assets/onion-col.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Onion Labs — We build the ONION® thinking tools" />
+  <meta property="og:description" content="Onion Labs: the tech behind Digital ONION®." />
+  <meta property="og:url" content="https://onionlabs.org/" />
+  <meta property="og:image" content="https://onionlabs.org/assets/onion-col.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Onion Labs — We build the ONION® thinking tools" />
+  <meta name="twitter:description" content="Onion Labs: the tech behind Digital ONION®." />
+  <meta name="twitter:image" content="https://onionlabs.org/assets/onion-col.png" />
+  <!-- Import Inter and JetBrains Mono fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="labs">
+  <!-- Animated canvas background -->
+  <canvas id="bg"></canvas>
+
+  <main class="shell">
+    <img class="brand" src="./assets/onion-gray.png" alt="Onion Labs logo" />
+    <h1>Onion Labs</h1>
+    <p class="tag">
+      We build the <span>ONION®</span> thinking tools.
+    </p>
+    <div class="terminal" role="region" aria-label="fun terminal">
+      <div class="prompt"><span class="caret">$</span> pnpm add @onionlabs/sdk</div>
+      <div class="line">+ added 1 package in 35ms</div>
+      <div class="prompt"><span class="caret">$</span> ./ship —prod</div>
+      <div class="line">✔ pipelines green — deploying static site…</div>
+      <div class="line">✔ done — see you soon 👋</div>
+    </div>
+    <nav class="links">
+      <a href="https://onioncentral.com" target="_blank" rel="noopener">onioncentral.com</a>
+      <a href="mailto:hello@onionlabs.org">hello@onionlabs.org</a>
+    </nav>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

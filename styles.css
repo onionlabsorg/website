@@ -1,0 +1,131 @@
+/*
+ * Stylesheet for Onion Labs vanilla JS landing page.
+ *
+ * The design embraces a clean, off‑white theme with a focus on
+ * readability and subtle technology cues. The animated canvas
+ * draws concentric rings and floating building blocks to hint
+ * at modularity while retaining the ONION® brand aesthetic.
+ */
+
+:root {
+  --bg: #f8f9fb;
+  --fg: #1f1f23;
+  --muted: #6c6c78;
+  --accent: #7b55b3;
+  --card-bg: rgba(255, 255, 255, 0.65);
+  --card-border: rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body.labs {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  overflow: hidden; /* single screen */
+}
+
+/* Canvas background fills the entire viewport */
+#bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Central content wrapper */
+.shell {
+  position: relative;
+  inset: 0;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 24px;
+}
+
+/* Onion Labs logo image */
+.brand {
+  width: min(120px, 22vw);
+  opacity: 0.85;
+  filter: drop-shadow(0 6px 24px rgba(123, 85, 179, 0.25));
+}
+
+h1 {
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  font-size: clamp(26px, 6vw, 54px);
+  margin: 12px 0 4px;
+  color: var(--fg);
+}
+
+.tag {
+  margin-bottom: 20px;
+  font-size: clamp(14px, 2.2vw, 18px);
+  color: var(--muted);
+}
+
+.tag span {
+  color: var(--accent);
+  font-weight: 900;
+}
+
+/* Terminal‑style panel */
+.terminal {
+  width: min(760px, 92vw);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 14px 16px;
+  text-align: left;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.prompt {
+  font-weight: 700;
+}
+
+.caret {
+  color: var(--accent);
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.links a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+  font-size: 14px;
+  transition: opacity 0.15s ease;
+}
+
+.links a:hover {
+  opacity: 0.8;
+}
+
+@media (max-height: 600px) {
+  .terminal {
+    display: none; /* hide terminal on very short screens to avoid clutter */
+  }
+}
